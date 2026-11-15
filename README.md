@@ -1,31 +1,16 @@
-# Mirror Reference v10
+# Mirror Reference v11
 
-PureRef風の軽量リファレンスボード。ビルド不要の静的Webアプリです。
+A lightweight, browser-based reference image board.
 
-## 画像の格納・復帰
-- 画像を選択して「サムネイルに格納」を押すと、ワークスペースから一時的に隠して右側の「サムネイル格納」へ移します。
-- 格納した画像は削除されず、サムネイルと名前が保持されます。
-- サムネイルの「戻す」でワークスペースへ復帰します。復帰した画像が見えるよう、表示位置をその画像の中心へ移動します。
-- プロジェクトJSONにも格納状態が保存されます。
-- PNG書き出しには、ワークスペース上に表示されている画像だけが含まれます。
+## Run
 
-## その他の操作
-- 画像クリック：選択して最前面に移動
-- 同じ画像をすばやく2回クリック：左右反転
-- 画像ドラッグ：移動
-- 空白ドラッグ：複数画像を範囲選択
-- `Shift` + レイヤークリック：選択を追加／解除
-- 四隅ハンドル：拡大縮小、上側の丸ハンドル：回転
-- `Space` + ドラッグ：ワークスペース移動
-- 矢印キー：選択画像を10px移動、`Shift` + 矢印：50px移動
-- `Delete` / `Backspace`：選択画像を削除
-- ワークスペース倍率は100%固定。通常スクロールで表示位置移動
-- トラックパッドのピンチ：選択画像の拡大縮小
-- 「画像＋」「画像−」：選択画像を1.5倍／約0.67倍に変更
-- 反転メニュー：選択画像／全画像／ワークスペース全体
-- サイドパネル幅220px、左右切り替え対応
-- HSBスポイトと使用カラー比率
-- JSONプロジェクト保存・読み込み、PNG書き出し
+Open `index.html` in a modern browser. No build step or server is required.
 
-## GitHub Pages
-`index.html` と `README.md` をリポジトリ直下に置き、Settings → Pages → Deploy from a branch → `main` / `/(root)` を選択してください。
+## v11 changes
+
+- Trackpad pinch and Ctrl+wheel no longer resize images or zoom the workspace.
+- Clicking a workspace thumbnail stores that image in the thumbnail area.
+- Clicking a stored thumbnail restores it to the workspace.
+- Removed the separate store and restore buttons to simplify the interface.
+
+Images can be added with the file picker, drag and drop, or clipboard paste. Projects can be saved as JSON and exported as PNG.
